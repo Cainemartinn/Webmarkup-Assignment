@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CoreX | Home</title>
+
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            COR<span>EX</span>
+        </div>
+
+        <div class="header-tagline">
+            Fitness • Strength • Community
+        </div>
+
+        <div class="accessibility-controls">
+
+            <button id="contrastBtn" class="accessibility-btn">
+                High Contrast
+            </button>
+
+            <button id="increaseText" class="accessibility-btn">
+                A+
+            </button>
+
+            <button id="decreaseText" class="accessibility-btn">
+                A-
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav aria-label="Main Navigation">
+
+        <a href="home.html" class="active" aria-current="page">
+            Home
+        </a>
+
+        <a href="facilities.html">
+            Facilities
+        </a>
+
+        <a href="openinghours.html">
+            Opening Hours
+        </a>
+
+        <a href="membership.html">
+            Membership
+        </a>
+
+        <a href="diet.html">
+            Diet
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <h1>
+            Welcome to <span>Corex</span>
+        </h1>
+
+        <p>
+            A modern fitness environment designed to help you train,
+            improve and reach your goals.
+        </p>
+
+        <a href="membership.html" class="hero-button">
+            Explore Membership
+        </a>
+
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+
+        <!-- ABOUT -->
+        <section class="about">
+
+            <h2>About Corex</h2>
+
+            <p>
+                Corex is a modern gym designed to provide an accessible
+                and comfortable environment for people with different
+                fitness goals and experience levels.
+            </p>
+
+            <p>
+                Our facilities provide a combination of cardio equipment,
+                strength training machines, free weights and dedicated
+                areas for functional training.
+            </p>
+
+            <p>
+                Whether you are beginning your fitness journey or looking
+                to maintain an established training routine, Corex provides
+                the facilities and environment needed to support your workouts.
+            </p>
+
+        </section>
+
+        <!-- FEATURES -->
+        <section class="features">
+
+            <div class="feature-card">
+
+                <h3>Opening Hours</h3>
+
+                <p>
+                    Find out when your local Corex gym is open and plan
+                    your workouts around your schedule.
+                </p>
+
+                <a href="openinghours.html" class="feature-link">
+                    View Opening Hours
+                </a>
+
+            </div>
+
+            <div class="feature-card">
+
+                <h3>Our Facilities</h3>
+
+                <p>
+                    Explore the different training areas and equipment
+                    available at Corex.
+                </p>
+
+                <a href="facilities.html" class="feature-link">
+                    Explore Facilities
+                </a>
+
+            </div>
+
+            <div class="feature-card">
+
+                <h3>Membership</h3>
+
+                <p>
+                    Learn more about Corex membership options and find
+                    an option that suits your training needs.
+                </p>
+
+                <a href="membership.html" class="feature-link">
+                    View Membership
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- WHY COREX -->
+        <section class="why-corex">
+
+            <h2>Why Choose Corex?</h2>
+
+            <p>
+                Corex focuses on creating a practical and welcoming fitness
+                environment where members can train comfortably.
+            </p>
+
+            <ul>
+
+                <li>Modern training equipment</li>
+                <li>Dedicated workout areas</li>
+                <li>Flexible opening hours</li>
+                <li>Facilities for different training styles</li>
+                <li>Suitable for different fitness levels</li>
+
+            </ul>
+
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+
+            <h2>Start Your Corex Journey</h2>
+
+            <p>
+                Explore our facilities, check our opening hours and find
+                the membership option that suits you.
+            </p>
+
+            <a href="membership.html" class="cta-button">
+                Explore Membership
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- BACK TO TOP -->
+    <button id="topBtn" aria-label="Back to top">
+        ↑
+    </button>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p><strong>COREX</strong></p>
+
+        <p>Fitness • Strength • Community</p>
+
+        <p>© 2026 Corex Gym. All rights reserved.</p>
+
+    </footer>
+
+    <!-- ACCESSIBILITY JAVASCRIPT -->
+    <script>
+
+        let currentSize = 100;
+
+        document.getElementById("increaseText")
+            .addEventListener("click", () => {
+
+                currentSize += 10;
+
+                document.body.style.fontSize =
+                    currentSize + "%";
+
+            });
+
+        document.getElementById("decreaseText")
+            .addEventListener("click", () => {
+
+                currentSize -= 10;
+
+                document.body.style.fontSize =
+                    currentSize + "%";
+
+            });
+
+        document.getElementById("contrastBtn")
+            .addEventListener("click", () => {
+
+                document.body.classList
+                    .toggle("high-contrast");
+
+            });
+
+        document.getElementById("topBtn")
+            .addEventListener("click", () => {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            });
+
+    </script>
+
+</body>
+
+</html>

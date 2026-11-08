@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Root Variables */
+
+:root{
+    --primary:#ff5e00;
+    --primary-hover:#ff772d;
+    --dark:#000000;
+    --card:#171717;
+    --card-hover:#222222;
+    --text:#ffffff;
+    --muted:#d1d5db;
+}
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#000;
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+/* Header */
+
+header{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 8%;
+    background:#000;
+}
+
+.logo{
+    font-size:3rem;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+.header-tagline{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    color:var(--muted);
+}
+
+/* Accessibility */
+
+.accessibility-controls{
+    display:flex;
+    gap:12px;
+}
+
+.accessibility-btn{
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    padding:12px 20px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:700;
+    transition:.3s ease;
+}
+
+.accessibility-btn:hover{
+    background:var(--primary-hover);
+}
+
+/* Navigation */
+
+nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    background:#050505;
+    padding:24px 20px;
+    border-top:1px solid rgba(255,255,255,.03);
+    border-bottom:1px solid rgba(255,255,255,.03);
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:1.1rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    transition:.3s ease;
+}
+
+nav a:hover,
+nav a.active{
+    color:var(--primary);
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.75),
+            rgba(0,0,0,.75)
+        ),
+        url("gym.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:clamp(3rem,7vw,5rem);
+    font-weight:900;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:var(--muted);
+    max-width:700px;
+    margin:auto;
+}
+
+/* Main */
+
+main{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:60px 0;
+}
+
+/* Opening Hours */
+
+.hours-section{
+    background:var(--card);
+    padding:40px;
+    border-radius:20px;
+    margin-bottom:40px;
+}
+
+.hours-section h2{
+    color:var(--primary);
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.opening-hours-table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.opening-hours-table th{
+    background:var(--primary);
+    color:#fff;
+    padding:16px;
+    text-align:left;
+    font-size:1rem;
+}
+
+.opening-hours-table td{
+    padding:16px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    color:var(--muted);
+}
+
+.opening-hours-table tr:nth-child(even){
+    background:#1d1d1d;
+}
+
+.opening-hours-table tr:hover{
+    background:#242424;
+}
+
+/* Important Info */
+
+.important-info{
+    background:var(--card);
+    padding:40px;
+    border-radius:20px;
+}
+
+.important-info h2{
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.important-info p{
+    color:var(--muted);
+}
+
+/* Footer */
+
+footer{
+    background:#050505;
+    text-align:center;
+    padding:40px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+/* Back to Top */
+
+#topBtn{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+
+    width:60px;
+    height:60px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--primary);
+    color:#fff;
+
+    font-size:22px;
+    font-weight:700;
+
+    cursor:pointer;
+    z-index:9999;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.3);
+    transition:.3s ease;
+}
+
+#topBtn:hover{
+    background:var(--primary-hover);
+    transform:translateY(-3px);
+}
+
+/* High Contrast */
+
+.high-contrast{
+    background:#fff !important;
+    color:#000 !important;
+}
+
+.high-contrast .hours-section,
+.high-contrast .important-info{
+    background:#fff !important;
+    color:#000 !important;
+    border:2px solid #000;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:20px;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .header-tagline{
+        position:static;
+        transform:none;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        gap:20px;
+    }
+
+    .hero{
+        padding:80px 20px;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hours-section{
+        padding:20px;
+        overflow-x:auto;
+    }
+
+    .accessibility-controls{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+}

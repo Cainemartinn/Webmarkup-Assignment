@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary:#ff5e00;
+    --primary-hover:#ff772d;
+    --dark:#000000;
+    --card:#171717;
+    --card-hover:#222222;
+    --text:#ffffff;
+    --muted:#d1d5db;
+}
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#000;
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+/* Accessibility */
+
+.accessibility-controls{
+    display:flex;
+    gap:12px;
+}
+
+.accessibility-btn{
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    padding:12px 20px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:700;
+    transition:.3s ease;
+}
+
+.accessibility-btn:hover{
+    background:var(--primary-hover);
+}
+
+/* Header */
+
+header{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 8%;
+    background:#000;
+}
+
+.logo{
+    font-size:3rem;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+.header-tagline{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    color:var(--muted);
+}
+
+/* Navigation */
+
+nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    background:#050505;
+    padding:24px 20px;
+    border-top:1px solid rgba(255,255,255,.03);
+    border-bottom:1px solid rgba(255,255,255,.03);
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:1.1rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    transition:.3s ease;
+}
+
+nav a:hover,
+nav a.active{
+    color:var(--primary);
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:90px 20px;
+    background:
+    linear-gradient(
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.75)
+    ),
+    url("gym.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:clamp(3rem,7vw,5rem);
+    font-weight:900;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:auto;
+    color:var(--muted);
+}
+
+/* Main */
+
+main{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    padding:45px 0;
+}
+
+/* Introduction */
+
+.introduction{
+    background:var(--card);
+    padding:35px;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
+.introduction h2{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.introduction p{
+    color:var(--muted);
+    margin-bottom:15px;
+}
+
+/* Nutrition Tips */
+
+.nutrition-tips{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-bottom:30px;
+}
+
+.tip-card{
+    background:var(--card);
+    padding:30px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.tip-card:hover{
+    background:var(--card-hover);
+    transform:translateY(-6px);
+}
+
+.tip-card h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.tip-card p{
+    color:var(--muted);
+}
+
+/* Facilities */
+
+.facilities{
+    display:grid;
+    gap:30px;
+    margin-bottom:30px;
+}
+
+.facility-card{
+    background:var(--card);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.facility-card:hover{
+    transform:translateY(-6px);
+    background:var(--card-hover);
+    box-shadow:0 10px 30px rgba(255,94,0,.2);
+}
+
+.facility-image img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    display:block;
+}
+
+.facility-content{
+    padding:30px;
+}
+
+.facility-content h3{
+    color:var(--primary);
+    margin-bottom:15px;
+    font-size:1.8rem;
+}
+
+.facility-content p{
+    color:var(--muted);
+    margin-bottom:15px;
+}
+
+.equipment-list{
+    padding-left:20px;
+}
+
+.equipment-list li{
+    margin-bottom:8px;
+}
+
+/* Equipment Info */
+
+.equipment-info{
+    background:var(--card);
+    padding:35px;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
+.equipment-info h2{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.equipment-info p{
+    color:var(--muted);
+}
+
+/* BMI */
+
+.bmi-form{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.input-group{
+    flex:1;
+    min-width:220px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:700;
+}
+
+.input-group input{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    font-size:1rem;
+}
+
+.bmi-form button{
+    background:var(--primary);
+    color:white;
+    border:none;
+    padding:14px 30px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:700;
+    align-self:flex-end;
+}
+
+.bmi-form button:hover{
+    background:var(--primary-hover);
+}
+
+#result{
+    margin-top:20px;
+    font-size:1.2rem;
+    font-weight:700;
+    color:var(--primary);
+}
+
+/* Meal Plan */
+
+.meal-plan{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.meal-card{
+    background:#101010;
+    border-radius:20px;
+    overflow:hidden;
+    text-align:center;
+}
+
+.meal-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.meal-card h3{
+    color:var(--primary);
+    margin:15px 0;
+}
+
+.meal-card p{
+    padding:0 15px 20px;
+}
+
+/* Comparison */
+
+.nutrition-comparison{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    margin-bottom:30px;
+}
+
+.comparison-card{
+    background:var(--card);
+    padding:30px;
+    border-radius:20px;
+}
+
+.comparison-card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.comparison-card ul{
+    padding-left:20px;
+}
+
+/* Quote */
+
+.quote{
+    background:linear-gradient(
+        135deg,
+        #ff5e00,
+        #ff772d
+    );
+    padding:50px;
+    border-radius:25px;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.quote h2{
+    margin-bottom:20px;
+    font-size:2rem;
+}
+
+.quote p{
+    max-width:800px;
+    margin:auto;
+}
+
+/* Footer */
+
+footer{
+    background:#050505;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer p{
+    margin:6px 0;
+}
+
+/* Back to Top */
+
+#topBtn{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+
+    width:60px;
+    height:60px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--primary);
+    color:white;
+
+    font-size:24px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.3);
+
+    transition:.3s ease;
+}
+
+#topBtn:hover{
+    background:var(--primary-hover);
+    transform:translateY(-4px);
+}
+
+/* High Contrast */
+
+.high-contrast{
+    background:white !important;
+    color:black !important;
+}
+
+.high-contrast .tip-card,
+.high-contrast .facility-card,
+.high-contrast .equipment-info,
+.high-contrast .introduction,
+.high-contrast .comparison-card{
+    background:white !important;
+    color:black !important;
+    border:2px solid black;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:20px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .header-tagline{
+        position:static;
+        transform:none;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .accessibility-controls{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .facility-image img{
+        height:220px;
+    }
+
+    .quote,
+    .equipment-info,
+    .introduction,
+    .tip-card{
+        padding:25px;
+    }
+
+    #topBtn{
+        width:55px;
+        height:55px;
+    }
+}

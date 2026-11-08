@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corex | Membership</title>
+    <link rel="stylesheet" href="Membership.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            COR<span>EX</span>
+        </div>
+
+        <div class="header-tagline">
+            Fitness • Strength • Community
+        </div>
+
+        <div class="accessibility-controls">
+            <button id="contrastToggle" class="accessibility-btn">
+                High Contrast
+            </button>
+
+            <button id="fontIncrease" class="accessibility-btn">
+                A+
+            </button>
+
+            <button id="fontDecrease" class="accessibility-btn">
+                A-
+            </button>
+        </div>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="openinghours.html">Opening Hours</a>
+        <a href="membership.html" class="active">Membership</a>
+        <a href="diet.html">Diet</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Corex Membership</h1>
+
+        <p>
+            Choose the membership that suits your training
+            routine and fitness goals.
+        </p>
+    </section>
+
+    <main id="main-content">
+
+        <section class="introduction">
+            <h2>Choose Your Membership</h2>
+
+            <p>
+                Corex offers flexible membership plans designed to
+                provide full access to our modern facilities and
+                training environments.
+            </p>
+        </section>
+
+        <section class="cards">
+
+            <div class="card">
+
+                <h3>Corex Standard</h3>
+
+                <p>
+                    Our standard membership provides everything
+                    needed for regular gym training.
+                </p>
+
+                <ul class="equipment-list">
+                    <li>Full gym access</li>
+                    <li>Cardio equipment</li>
+                    <li>Strength equipment</li>
+                    <li>Free weight area</li>
+                    <li>Functional training area</li>
+                </ul>
+
+                <div class="membership-price">
+                    €34.99 <span>/ month</span>
+                </div>
+
+                <a href="contact.html" class="cta-button">
+                    Choose Standard
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Corex Premium</h3>
+
+                <p>
+                    Premium membership includes additional benefits
+                    and enhanced training opportunities.
+                </p>
+
+                <ul class="equipment-list">
+                    <li>Everything included in Standard</li>
+                    <li>Priority class booking</li>
+                    <li>Additional training sessions</li>
+                    <li>Premium member benefits</li>
+                    <li>Additional member services</li>
+                </ul>
+
+                <div class="membership-price premium">
+                    €44.99 <span>/ month</span>
+                </div>
+
+                <a href="contact.html" class="cta-button">
+                    Choose Premium
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="equipment-info">
+
+            <h2>Membership Comparison</h2>
+
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Standard</th>
+                    <th>Premium</th>
+                </tr>
+
+                <tr>
+                    <td>Full Gym Access</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+
+                <tr>
+                    <td>Cardio Equipment</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+
+                <tr>
+                    <td>Strength Equipment</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+
+                <tr>
+                    <td>Functional Training Area</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+
+                <tr>
+                    <td>Priority Class Booking</td>
+                    <td>✗</td>
+                    <td>✓</td>
+                </tr>
+
+                <tr>
+                    <td>Additional Training Sessions</td>
+                    <td>✗</td>
+                    <td>✓</td>
+                </tr>
+
+                <tr>
+                    <td>Premium Benefits</td>
+                    <td>✗</td>
+                    <td>✓</td>
+                </tr>
+            </table>
+
+        </section>
+
+        <section class="equipment-info">
+
+            <h2>Membership Information</h2>
+
+            <p>
+                Both Corex memberships provide access to the main gym
+                facilities during opening hours.
+            </p>
+
+            <p>
+                Members can use a range of cardio machines,
+                strength training equipment, free weights
+                and dedicated workout areas.
+            </p>
+
+            <p>
+                The Premium membership includes additional
+                benefits and services compared with the
+                Standard membership.
+            </p>
+
+        </section>
+
+        <section class="location">
+
+            <h2>Start Your Fitness Journey Today</h2>
+
+            <p>
+                Join the Corex community and gain access to modern
+                facilities, professional equipment and flexible
+                membership options.
+            </p>
+
+            <a href="contact.html" class="location-button">
+                Join Corex Today
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p><strong>COREX</strong></p>
+        <p>Fitness • Strength • Community</p>
+        <p>© 2026 Corex Gym. All rights reserved.</p>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="topBtn" aria-label="Back to top">
+        ↑
+    </button>
+
+    <script>
+
+        let currentFontSize = 100;
+
+        document.getElementById("contrastToggle")
+            .addEventListener("click", () => {
+                document.body.classList.toggle("high-contrast");
+            });
+
+        document.getElementById("fontIncrease")
+            .addEventListener("click", () => {
+                currentFontSize += 10;
+                document.body.style.fontSize = currentFontSize + "%";
+            });
+
+        document.getElementById("fontDecrease")
+            .addEventListener("click", () => {
+
+                currentFontSize -= 10;
+
+                if (currentFontSize < 80) {
+                    currentFontSize = 80;
+                }
+
+                document.body.style.fontSize = currentFontSize + "%";
+            });
+
+        document.getElementById("topBtn")
+            .addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+
+    </script>
+
+</body>
+
+</html>

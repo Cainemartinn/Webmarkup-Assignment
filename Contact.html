@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corex | Contact</title>
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        COR<span>EX</span>
+    </div>
+
+    <div class="header-tagline">
+        Fitness • Strength • Community
+    </div>
+
+    <div class="accessibility-controls">
+        <button id="contrastToggle" class="accessibility-btn">
+            High Contrast
+        </button>
+
+        <button id="fontIncrease" class="accessibility-btn">
+            A+
+        </button>
+
+        <button id="fontDecrease" class="accessibility-btn">
+            A-
+        </button>
+    </div>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+
+    <a href="facilities.html">
+        Facilities
+    </a>
+
+    <a href="openinghours.html">
+        Opening Hours
+    </a>
+
+    <a href="membership.html">
+        Membership
+    </a>
+
+    <a href="diet.html">
+        Diet
+    </a>
+
+    <a href="contact.html" class="active">
+        Contact
+    </a>
+</nav>
+
+<section class="hero">
+    <h1>Contact Corex</h1>
+
+    <p>
+        Have a question about memberships, facilities or training?
+        Our team is ready to help.
+    </p>
+</section>
+
+<main>
+
+    <section class="introduction">
+        <h2>Get In Touch</h2>
+
+        <p>
+            Whether you're looking to join Corex, upgrade your
+            membership or simply ask a question, we'd love to hear
+            from you.
+        </p>
+    </section>
+
+    <!-- CONTACT CARDS -->
+    <section class="cards">
+
+        <div class="card">
+            <h3>📞 Phone</h3>
+
+            <p>
+                Call our team directly during opening hours.
+            </p>
+
+            <strong>020 7946 0123</strong>
+        </div>
+
+        <div class="card">
+            <h3>📧 Email</h3>
+
+            <p>
+                Send us an email anytime.
+            </p>
+
+            <strong>info@corexgym.co.uk</strong>
+        </div>
+
+        <div class="card">
+            <h3>📍 Location</h3>
+
+            <p>
+                Corex Fitness Centre<br>
+                25 Central Street<br>
+                London
+            </p>
+        </div>
+
+    </section>
+
+    <!-- CONTACT FORM + HOURS -->
+    <section class="contact-grid">
+
+        <div class="equipment-info">
+            <h2>Send Us A Message</h2>
+
+            <form>
+
+                <div class="form-row">
+                    <input
+                        type="text"
+                        placeholder="Full Name"
+                        required>
+
+                    <input
+                        type="email"
+                        placeholder="Email Address"
+                        required>
+                </div>
+
+                <input
+                    type="text"
+                    placeholder="Subject"
+                    required>
+
+                <textarea
+                    placeholder="Enter your message"
+                    rows="8"
+                    required></textarea>
+
+                <button
+                    type="submit"
+                    class="cta-button">
+                    Send Message
+                </button>
+
+            </form>
+        </div>
+
+        <div class="equipment-info">
+            <h2>Opening Hours</h2>
+
+            <ul class="hours-list">
+                <li>Monday - Friday: 06:00 - 22:00</li>
+                <li>Saturday: 08:00 - 20:00</li>
+                <li>Sunday: 08:00 - 20:00</li>
+            </ul>
+
+            <h2>Why Contact Us?</h2>
+
+            <ul class="hours-list">
+                <li>Membership Enquiries</li>
+                <li>Personal Training Questions</li>
+                <li>Class Information</li>
+                <li>General Support</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- MAP -->
+    <section class="equipment-info">
+        <h2>Find Us</h2>
+
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps?q=london&output=embed"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="equipment-info">
+
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>Can I visit before joining?</h3>
+        <p>
+            Yes. Contact us to arrange a tour of the facilities.
+        </p>
+
+        <h3>Do you offer personal training?</h3>
+        <p>
+            Yes. Our trainers can provide personalised fitness
+            plans and support.
+        </p>
+
+        <h3>Can I upgrade my membership?</h3>
+        <p>
+            Absolutely. Standard members can upgrade to Premium
+            at any time.
+        </p>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="location">
+
+        <h2>Ready To Join Corex?</h2>
+
+        <p>
+            Start your fitness journey today with access to
+            premium facilities and flexible membership plans.
+        </p>
+
+        <a href="membership.html"
+           class="location-button">
+            View Memberships
+        </a>
+
+    </section>
+
+</main>
+
+<!-- BACK TO TOP -->
+<button id="topBtn" aria-label="Back to top">
+    ↑
+</button>
+
+<footer>
+    <p><strong>COREX</strong></p>
+    <p>Fitness • Strength • Community</p>
+    <p>© 2026 Corex Gym. All rights reserved.</p>
+</footer>
+
+<script>
+
+let currentFontSize = 100;
+
+document.getElementById("contrastToggle")
+.addEventListener("click", () => {
+    document.body.classList.toggle("high-contrast");
+});
+
+document.getElementById("fontIncrease")
+.addEventListener("click", () => {
+    currentFontSize += 10;
+
+    document.body.style.fontSize =
+        currentFontSize + "%";
+});
+
+document.getElementById("fontDecrease")
+.addEventListener("click", () => {
+    currentFontSize -= 10;
+
+    if(currentFontSize < 80){
+        currentFontSize = 80;
+    }
+
+    document.body.style.fontSize =
+        currentFontSize + "%";
+});
+
+document.getElementById("topBtn")
+.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+</script>
+</body>
+</html>

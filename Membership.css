@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary:#ff5e00;
+    --primary-hover:#ff772d;
+    --dark:#000000;
+    --card:#171717;
+    --card-hover:#222222;
+    --text:#ffffff;
+    --muted:#d1d5db;
+}
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#000;
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+/* Accessibility */
+
+.accessibility-controls{
+    display:flex;
+    gap:12px;
+}
+
+.accessibility-btn{
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    padding:12px 20px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:700;
+    transition:.3s ease;
+}
+
+.accessibility-btn:hover{
+    background:var(--primary-hover);
+}
+
+/* Header */
+
+header{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 8%;
+    background:#000;
+}
+
+.logo{
+    font-size:3rem;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+.header-tagline{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    color:var(--muted);
+    font-size:1rem;
+}
+
+/* Navigation */
+
+nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    background:#050505;
+    padding:24px 20px;
+    border-top:1px solid rgba(255,255,255,.03);
+    border-bottom:1px solid rgba(255,255,255,.03);
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:1.1rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    transition:.3s ease;
+}
+
+nav a:hover,
+nav a.active{
+    color:var(--primary);
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:90px 20px;
+    background:
+    linear-gradient(
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.75)
+    ),
+    url("gym.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:clamp(3rem,7vw,5rem);
+    font-weight:900;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:auto;
+    color:var(--muted);
+}
+
+/* Main */
+
+main{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    padding:45px 40px 45px 0;
+}
+
+/* Introduction */
+
+.introduction{
+    background:var(--card);
+    padding:35px;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
+.introduction h2{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.introduction p{
+    color:var(--muted);
+}
+
+/* Membership Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+    margin-bottom:30px;
+}
+
+.card{
+    background:var(--card);
+    border-radius:20px;
+    padding:30px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    background:var(--card-hover);
+    box-shadow:0 10px 30px rgba(255,94,0,.20);
+}
+
+.card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+    font-size:1.7rem;
+}
+
+.card p{
+    color:var(--muted);
+    margin-bottom:15px;
+}
+
+.equipment-list{
+    padding-left:20px;
+    margin-bottom:20px;
+}
+
+.equipment-list li{
+    margin-bottom:8px;
+}
+
+.membership-price{
+    font-size:2rem;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.membership-price span{
+    font-size:1rem;
+    color:var(--muted);
+}
+
+.premium{
+    color:var(--primary);
+}
+
+/* Buttons */
+
+.cta-button,
+.location-button{
+    display:inline-block;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    border:none;
+    padding:14px 30px;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.cta-button:hover,
+.location-button:hover{
+    background:var(--primary-hover);
+}
+
+/* Content Boxes */
+
+.equipment-info{
+    background:var(--card);
+    padding:35px;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
+.equipment-info h2{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.equipment-info p{
+    color:var(--muted);
+    margin-bottom:12px;
+}
+
+/* Table */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th{
+    background:var(--primary);
+    color:white;
+    padding:15px;
+    text-align:left;
+}
+
+td{
+    padding:15px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+tr:nth-child(even){
+    background:#1c1c1c;
+}
+
+/* CTA Section */
+
+.location{
+    background:linear-gradient(
+        135deg,
+        #ff5e00,
+        #ff772d
+    );
+    padding:50px;
+    border-radius:25px;
+}
+
+.location h2{
+    margin-bottom:15px;
+    font-size:2.2rem;
+}
+
+.location p{
+    max-width:800px;
+    margin-bottom:25px;
+}
+
+/* Footer */
+
+footer{
+    background:#050505;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer p{
+    margin:6px 0;
+}
+
+/* Back to Top */
+
+#topBtn{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+
+    width:60px;
+    height:60px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--primary);
+    color:white;
+
+    font-size:24px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.3);
+
+    transition:.3s ease;
+}
+
+#topBtn:hover{
+    background:var(--primary-hover);
+    transform:translateY(-4px);
+}
+
+/* High Contrast */
+
+.high-contrast{
+    background:white !important;
+    color:black !important;
+}
+
+.high-contrast .card,
+.high-contrast .equipment-info,
+.high-contrast .introduction{
+    background:white !important;
+    color:black !important;
+    border:2px solid black;
+}
+
+/* Custom Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:20px;
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+    main{
+        padding:40px 0;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .header-tagline{
+        position:static;
+        transform:none;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .accessibility-controls{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .location,
+    .equipment-info,
+    .introduction,
+    .card{
+        padding:25px;
+    }
+
+    #topBtn{
+        width:55px;
+        height:55px;
+    }
+}

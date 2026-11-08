@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoreX | Nutrition & Diet</title>
+    <link rel="stylesheet" href="Diet.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            COR<span>EX</span>
+        </div>
+
+        <div class="header-tagline">
+            Fitness • Strength • Community
+        </div>
+
+        <div class="accessibility-controls">
+            <button id="contrastToggle" class="accessibility-btn">
+                High Contrast
+            </button>
+
+            <button id="fontIncrease" class="accessibility-btn">
+                A+
+            </button>
+
+            <button id="fontDecrease" class="accessibility-btn">
+                A-
+            </button>
+        </div>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="openinghours.html">Opening Hours</a>
+        <a href="membership.html">Membership</a>
+        <a href="diet.html" class="active">Diet</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Fuel Your Body. Reach Your Goals.</h1>
+
+        <p>
+            Discover nutrition advice, healthy eating habits and meal ideas
+            designed to support your fitness journey.
+        </p>
+    </section>
+
+    <main>
+
+        <section class="introduction">
+
+            <h2>Nutrition Matters</h2>
+
+            <p>
+                Exercise is only part of the equation. Proper nutrition
+                provides your body with the fuel needed for training,
+                recovery and long-term success.
+            </p>
+
+            <p>
+                Whether your goal is weight loss, muscle gain or improving
+                overall health, healthy eating habits can help maximise
+                your results.
+            </p>
+
+        </section>
+
+        <section class="nutrition-tips">
+
+            <div class="tip-card">
+                <h3>Stay Hydrated</h3>
+                <p>
+                    Drink water consistently throughout the day to support
+                    performance and recovery.
+                </p>
+            </div>
+
+            <div class="tip-card">
+                <h3>Eat Enough Protein</h3>
+                <p>
+                    Protein supports muscle repair and growth after training.
+                </p>
+            </div>
+
+            <div class="tip-card">
+                <h3>Balanced Meals</h3>
+                <p>
+                    Combine protein, carbohydrates and healthy fats in each meal.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="facilities">
+
+            <article class="facility-card">
+
+                <div class="facility-image">
+                    <img src="Weight.loss.jpg" alt="Weight Loss Nutrition">
+                </div>
+
+                <div class="facility-content">
+
+                    <h3>Weight Loss</h3>
+
+                    <p>
+                        Focus on balanced meals and portion control.
+                    </p>
+
+                    <ul class="equipment-list">
+                        <li>Lean proteins</li>
+                        <li>Fresh vegetables</li>
+                        <li>Whole grains</li>
+                        <li>Healthy snacks</li>
+                    </ul>
+
+                </div>
+
+            </article>
+
+            <article class="facility-card">
+
+                <div class="facility-image">
+                    <img src="Muscle.gain.jpg" alt="Muscle Gain Nutrition">
+                </div>
+
+                <div class="facility-content">
+
+                    <h3>Muscle Gain</h3>
+
+                    <p>
+                        Support muscle growth through adequate protein intake.
+                    </p>
+
+                    <ul class="equipment-list">
+                        <li>Chicken &amp; Fish</li>
+                        <li>Eggs</li>
+                        <li>Rice &amp; Oats</li>
+                        <li>Protein-rich foods</li>
+                    </ul>
+
+                </div>
+
+            </article>
+
+            <article class="facility-card">
+
+                <div class="facility-image">
+                    <img src="Sports.performance.jpg" alt="Sports Performance">
+                </div>
+
+                <div class="facility-content">
+
+                    <h3>Sports Performance</h3>
+
+                    <p>
+                        Improve energy, endurance and recovery.
+                    </p>
+
+                    <ul class="equipment-list">
+                        <li>Complex carbohydrates</li>
+                        <li>Hydration</li>
+                        <li>Recovery meals</li>
+                        <li>Balanced nutrition</li>
+                    </ul>
+
+                </div>
+
+            </article>
+
+            <article class="facility-card">
+
+                <div class="facility-image">
+                    <img src="Healthy.living.jpg" alt="Healthy Living">
+                </div>
+
+                <div class="facility-content">
+
+                    <h3>Healthy Living</h3>
+
+                    <p>
+                        Build habits that support long-term wellbeing.
+                    </p>
+
+                    <ul class="equipment-list">
+                        <li>Fruit &amp; Vegetables</li>
+                        <li>Healthy fats</li>
+                        <li>Hydration</li>
+                        <li>Balanced meals</li>
+                    </ul>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="equipment-info">
+
+            <h2>BMI Calculator</h2>
+
+            <p>Check your Body Mass Index.</p>
+
+            <div class="bmi-form">
+
+                <div class="input-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="Enter weight">
+                </div>
+
+                <div class="input-group">
+                    <label for="height">Height (cm)</label>
+                    <input type="number" id="height" placeholder="Enter height">
+                </div>
+
+                <button onclick="calculateBMI()">
+                    Calculate BMI
+                </button>
+
+            </div>
+
+            <p id="result"></p>
+
+        </section>
+
+        <section class="equipment-info">
+
+            <h2>Example Healthy Meal Plan</h2>
+
+            <div class="meal-plan">
+
+                <div class="meal-card">
+                    <img src="Oatmeal.jpg" alt="Breakfast">
+                    <h3>Breakfast</h3>
+                    <p>Oats, banana and Greek yogurt.</p>
+                </div>
+
+                <div class="meal-card">
+                    <img src="Lunch.jpg" alt="Lunch">
+                    <h3>Lunch</h3>
+                    <p>Chicken breast, brown rice and vegetables.</p>
+                </div>
+
+                <div class="meal-card">
+                    <img src="dinner.jpg" alt="Dinner">
+                    <h3>Dinner</h3>
+                    <p>Salmon, sweet potato and salad.</p>
+                </div>
+
+                <div class="meal-card">
+                    <img src="snack.jpg" alt="Snack">
+                    <h3>Snacks</h3>
+                    <p>Fruit, mixed nuts and protein yogurt.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="nutrition-comparison">
+
+            <div class="comparison-card">
+
+                <h3>Before Workout</h3>
+
+                <ul>
+                    <li>Banana</li>
+                    <li>Oats</li>
+                    <li>Rice</li>
+                    <li>Water</li>
+                </ul>
+
+            </div>
+
+            <div class="comparison-card">
+
+                <h3>After Workout</h3>
+
+                <ul>
+                    <li>Protein Shake</li>
+                    <li>Chicken</li>
+                    <li>Greek Yogurt</li>
+                    <li>Recovery Meal</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <section class="quote">
+
+            <h2>
+                "You Can't Out Train A Poor Diet."
+            </h2>
+
+            <p>
+                Consistent nutrition choices lead to long-term success.
+                Healthy eating habits combined with regular exercise
+                help you achieve your goals and improve your overall wellbeing.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p><strong>COREX</strong></p>
+        <p>Fitness • Strength • Community</p>
+        <p>© 2026 Corex Gym. All rights reserved.</p>
+    </footer>
+
+    <button id="topBtn" aria-label="Back to top">
+        ↑
+    </button>
+
+    <script>
+
+        function calculateBMI() {
+
+            let weight = parseFloat(
+                document.getElementById("weight").value
+            );
+
+            let height = parseFloat(
+                document.getElementById("height").value
+            ) / 100;
+
+            if (!weight || !height) {
+
+                document.getElementById("result").textContent =
+                    "Please enter both weight and height.";
+
+                return;
+            }
+
+            let bmi = weight / (height * height);
+
+            let category = "";
+
+            if (bmi < 18.5) {
+                category = "Underweight";
+            }
+            else if (bmi < 25) {
+                category = "Healthy Weight";
+            }
+            else if (bmi < 30) {
+                category = "Overweight";
+            }
+            else {
+                category = "Obese";
+            }
+
+            document.getElementById("result").textContent =
+                `Your BMI is ${bmi.toFixed(1)} (${category})`;
+        }
+
+        let currentFontSize = 100;
+
+        document.getElementById("contrastToggle")
+            .addEventListener("click", () => {
+                document.body.classList.toggle("high-contrast");
+            });
+
+        document.getElementById("fontIncrease")
+            .addEventListener("click", () => {
+                currentFontSize += 10;
+                document.body.style.fontSize =
+                    currentFontSize + "%";
+            });
+
+        document.getElementById("fontDecrease")
+            .addEventListener("click", () => {
+
+                currentFontSize -= 10;
+
+                if (currentFontSize < 80) {
+                    currentFontSize = 80;
+                }
+
+                document.body.style.fontSize =
+                    currentFontSize + "%";
+            });
+
+        document.getElementById("topBtn")
+            .addEventListener("click", () => {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            });
+
+    </script>
+
+</body>
+
+</html>

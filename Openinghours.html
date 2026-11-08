@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoreX | Opening Hours</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        COR<span>EX</span>
+    </div>
+
+    <div class="header-tagline">
+        Fitness • Strength • Community
+    </div>
+
+    <div class="accessibility-controls">
+
+        <button class="accessibility-btn" id="contrastToggle">
+            High Contrast
+        </button>
+
+        <button class="accessibility-btn" id="fontIncrease">
+            A+
+        </button>
+
+        <button class="accessibility-btn" id="fontDecrease">
+            A-
+        </button>
+
+    </div>
+
+</header>
+
+<nav>
+    <a href="Home.html">Home</a>
+    <a href="facilities.html">Facilities</a>
+    <a href="openinghours.html">Opening Hours</a>
+    <a href="Membership.html">Membership</a>
+    <a href="Diet.html">Diet</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<section class="hero">
+
+    <h1>Opening Hours</h1>
+
+    <p>
+        Check our weekly opening times and plan your workout schedule.
+    </p>
+
+</section>
+
+<main>
+
+    <section class="hours-section">
+
+        <h2>Weekly Opening Hours</h2>
+
+        <table class="opening-hours-table">
+
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Opening Time</th>
+                    <th>Closing Time</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Monday</td>
+                    <td>06:00</td>
+                    <td>22:00</td>
+                </tr>
+
+                <tr>
+                    <td>Tuesday</td>
+                    <td>06:00</td>
+                    <td>22:00</td>
+                </tr>
+
+                <tr>
+                    <td>Wednesday</td>
+                    <td>06:00</td>
+                    <td>22:00</td>
+                </tr>
+
+                <tr>
+                    <td>Thursday</td>
+                    <td>06:00</td>
+                    <td>22:00</td>
+                </tr>
+
+                <tr>
+                    <td>Friday</td>
+                    <td>06:00</td>
+                    <td>21:00</td>
+                </tr>
+
+                <tr>
+                    <td>Saturday</td>
+                    <td>08:00</td>
+                    <td>18:00</td>
+                </tr>
+
+                <tr>
+                    <td>Sunday</td>
+                    <td>08:00</td>
+                    <td>18:00</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <section class="important-info">
+
+        <h2>Important Information</h2>
+
+        <p>
+            Opening hours may vary during public holidays and special
+            events. Please contact your local CoreX branch for the most
+            up-to-date information.
+        </p>
+
+    </section>
+
+</main>
+
+<footer>
+    <p><strong>COREX</strong></p>
+    <p>Fitness • Strength • Community</p>
+    <p>&copy; 2026 CoreX Gym. All Rights Reserved.</p>
+</footer>
+
+<button id="topBtn" onclick="topFunction()">↑</button>
+
+<script>
+
+let currentFontSize = 100;
+
+document.getElementById("contrastToggle")
+.addEventListener("click", () => {
+    document.body.classList.toggle("high-contrast");
+});
+
+document.getElementById("fontIncrease")
+.addEventListener("click", () => {
+    currentFontSize += 10;
+    document.body.style.fontSize = currentFontSize + "%";
+});
+
+document.getElementById("fontDecrease")
+.addEventListener("click", () => {
+
+    currentFontSize -= 10;
+
+    if(currentFontSize < 80){
+        currentFontSize = 80;
+    }
+
+    document.body.style.fontSize = currentFontSize + "%";
+
+});
+
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
